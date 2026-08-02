@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gallery Reels</title> 
+    <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#000000',
+                        surface: '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        /* Custom scrollbar to match the dark theme if needed */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center font-sans antialiased">
+
+    <!-- Header -->
+    <header
+        class="w-full max-w-[1600px] p-4 flex justify-between items-center sticky top-0 z-50 bg-black/80 backdrop-blur-md">
+        <h1 class="text-2xl font-bold tracking-tight"><a href="/">Gallery Reels</a></h1>
+
+        <nav>
+            <!-- Placeholder for potential nav items -->
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-[1600px] p-4 flex-1">
+
+
+        <!-- Image Grid -->
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[500px]">
+            <!-- Images will be injected here by JS -->
+        </div>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
